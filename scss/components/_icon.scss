@@ -17,6 +17,13 @@
   stroke-linecap: round;
   stroke-linejoin: round;
 
+  // Cart bag: tall and narrow with a thin outline, as in the design.
+  &--bag {
+    width: 12px;
+    height: 15px;
+    stroke-width: 1.1;
+  }
+
   &--lg {
     --size: 18px;
   }

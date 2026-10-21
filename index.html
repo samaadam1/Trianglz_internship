@@ -22,6 +22,10 @@
     <svg class="sprite" aria-hidden="true" focusable="false">
       <symbol id="icon-check" viewBox="0 0 12 12"><path d="M2 6.5l2.5 2.5L10 3.5" /></symbol>
       <symbol id="icon-menu" viewBox="0 0 18 18"><path d="M2 5h14M2 9h14M2 13h14" /></symbol>
+      <symbol id="icon-bag" viewBox="0 0 12 15">
+        <path d="M1.2 4.5h9.6l-1 8.5a1 1 0 0 1-1 1.1H3.2a1 1 0 0 1-1-1.1z" />
+        <path d="M4 4.5V3.5a2 2 0 0 1 4 0v1" />
+      </symbol>
       <symbol id="icon-sun" viewBox="0 0 24 24">
         <circle cx="12" cy="12" r="4" />
         <path d="M12 2.5v2.5M12 19v2.5M2.5 12H5M19 12h2.5M5.3 5.3l1.8 1.8M16.9 16.9l1.8 1.8M18.7 5.3l-1.8 1.8M7.1 16.9l-1.8 1.8" />
@@ -50,7 +54,10 @@
           </ul>
         </nav>
 
-        <button class="btn btn--secondary btn--small site-header__cart" type="button">Cart (0)</button>
+        <button class="btn btn--secondary btn--small site-header__cart" type="button">
+          <svg class="icon icon--bag" aria-hidden="true"><use href="#icon-bag" /></svg>
+          Cart (0)
+        </button>
 
         <button
           class="menu-toggle"
