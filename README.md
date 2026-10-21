@@ -2,7 +2,7 @@
 
 Landing page for the fictional Lumen L2 desk lamp, built from the "Assessment 01" design (style guide, 1440px desktop frame, 375px mobile frame) with semantic HTML, modern CSS and an SCSS architecture. No framework and no JS dependencies.
 
-**Live:** _add the GitHub Pages link here_
+**Live:** https://samaadam1.github.io/Trianglz_internship/
 
 ## Run it
 
