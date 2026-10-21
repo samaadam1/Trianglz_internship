@@ -1,0 +1,14 @@
+{
+  "name": "lumen-landing",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Lumen product landing page (HTML + SCSS)",
+  "scripts": {
+    "build": "sass --style=compressed --no-source-map scss/main.scss css/main.css",
+    "watch": "sass --watch scss/main.scss css/main.css",
+    "start": "npx serve ."
+  },
+  "devDependencies": {
+    "sass": "^1.80.0"
+  }
+}

@@ -1,0 +1,77 @@
+@use '../abstracts/mixins' as *;
+
+.hero {
+  padding-block: var(--space-6) var(--section-pad);
+
+  &__grid {
+    display: grid;
+    gap: var(--space-7);
+
+    @include desktop {
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: var(--space-8);
+    }
+  }
+
+  &__content {
+    display: grid;
+    gap: var(--space-4);
+    justify-items: start;
+  }
+
+  &__lead {
+    max-width: 440px;
+  }
+
+  &__actions {
+    display: grid;
+    gap: var(--space-3);
+    width: 100%;
+    margin-top: var(--space-2);
+
+    @include desktop {
+      display: flex;
+      width: auto;
+    }
+  }
+
+  &__perks {
+    display: grid;
+    gap: var(--space-2);
+    margin-top: var(--space-2);
+
+    @include desktop {
+      display: flex;
+      gap: var(--space-5);
+    }
+  }
+
+  &__perk {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 500;
+  }
+
+  // Mobile image sits below the copy; desktop sits to the right.
+  &__media {
+    overflow: hidden;
+    border-radius: var(--radius-image-mobile);
+    background: var(--color-line);
+    aspect-ratio: 327 / 300;
+
+    @include desktop {
+      border-radius: var(--radius-image);
+      aspect-ratio: 580 / 460;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}

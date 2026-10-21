@@ -1,0 +1,19 @@
+@use '../abstracts/mixins' as *;
+
+.specs {
+  &__grid {
+    display: grid;
+    gap: var(--space-7);
+
+    @include desktop {
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-8);
+      align-items: start;
+    }
+  }
+
+  &__head {
+    display: grid;
+    gap: var(--space-3);
+  }
+}

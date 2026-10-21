@@ -1,0 +1,33 @@
+@use '../abstracts/mixins' as *;
+
+.spec-table {
+  width: 100%;
+  border-collapse: collapse;
+  border-top: 1px solid var(--color-ink);
+
+  th,
+  td {
+    padding-block: var(--space-4);
+    border-bottom: 1px solid var(--color-line);
+    font-size: 14px;
+    line-height: 20px;
+    vertical-align: top;
+  }
+
+  th {
+    font-weight: 600;
+    text-align: left;
+    color: var(--color-ink);
+  }
+
+  td {
+    text-align: right;
+  }
+
+  @include desktop {
+    th,
+    td {
+      padding-block: var(--space-5);
+    }
+  }
+}

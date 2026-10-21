@@ -1,0 +1,15 @@
+@use 'variables' as *;
+
+// Mobile-first: styles apply from 768px up (style guide: "mobile styles below 768 px").
+@mixin desktop {
+  @media (min-width: $bp-desktop) {
+    @content;
+  }
+}
+
+@mixin focus-ring($color: var(--color-ink)) {
+  &:focus-visible {
+    outline: 3px solid $color;
+    outline-offset: 3px;
+  }
+}

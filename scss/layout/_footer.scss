@@ -1,0 +1,47 @@
+@use '../abstracts/mixins' as *;
+
+.site-footer {
+  padding-block: var(--space-6);
+  background: var(--color-paper);
+
+  &__inner {
+    display: grid;
+    gap: var(--space-4);
+
+    @include desktop {
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+    }
+  }
+
+  &__links {
+    display: flex;
+    gap: var(--space-5);
+
+    @include desktop {
+      justify-content: center;
+    }
+  }
+
+  &__link {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 500;
+    color: var(--color-ink);
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    @include focus-ring;
+  }
+
+  &__copy {
+    font-size: 14px;
+    line-height: 20px;
+
+    @include desktop {
+      text-align: right;
+    }
+  }
+}

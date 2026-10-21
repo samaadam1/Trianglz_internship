@@ -1,0 +1,75 @@
+@use '../abstracts/mixins' as *;
+
+// Type scale from the style guide (mobile first, desktop from 768px).
+body {
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 400;
+  color: var(--color-ink-soft);
+
+  @include desktop {
+    font-size: 18px;
+    line-height: 28px;
+  }
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  color: var(--color-ink);
+}
+
+h1 {
+  font-size: 40px;
+  line-height: 44px;
+  font-weight: 700;
+  letter-spacing: -1.5px;
+
+  @include desktop {
+    font-size: 72px;
+    line-height: 76px;
+  }
+}
+
+h2 {
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+  letter-spacing: -0.8px;
+
+  @include desktop {
+    font-size: 44px;
+    line-height: 52px;
+  }
+}
+
+h3 {
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 600;
+
+  @include desktop {
+    font-size: 22px;
+    line-height: 28px;
+  }
+}
+
+.eyebrow {
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: var(--color-ink-soft);
+
+  @include desktop {
+    font-size: 13px;
+  }
+}
+
+.small {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+}

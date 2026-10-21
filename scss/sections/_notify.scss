@@ -1,0 +1,47 @@
+@use '../abstracts/mixins' as *;
+
+.notify {
+  background: var(--color-ink);
+  color: var(--color-paper);
+
+  h2 {
+    color: var(--color-paper);
+  }
+
+  &__grid {
+    display: grid;
+    gap: var(--space-6);
+
+    @include desktop {
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: var(--space-8);
+    }
+  }
+
+  &__copy {
+    display: grid;
+    gap: var(--space-3);
+    color: var(--color-line);
+  }
+
+  &__form {
+    display: grid;
+    gap: var(--space-3);
+
+    @include desktop {
+      grid-template-columns: 1fr auto;
+      align-items: end;
+    }
+  }
+
+  &__hint {
+    font-size: 12px;
+    line-height: 16px;
+    color: var(--color-line);
+
+    @include desktop {
+      grid-column: 1 / -1;
+    }
+  }
+}

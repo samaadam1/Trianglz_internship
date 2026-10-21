@@ -1,0 +1,39 @@
+// Design tokens taken from the Lumen style guide.
+
+$colors: (
+  'ink': #16181d,
+  'ink-soft': #4a4e57,
+  'paper': #f4f3ee,
+  'surface': #ffffff,
+  'line': #dedcd3,
+  'accent': #d9f25b,
+  'accent-hover': #c6e03f,
+);
+
+$spacing: (
+  1: 4px,
+  2: 8px,
+  3: 12px,
+  4: 16px,
+  5: 24px,
+  6: 32px,
+  7: 48px,
+  8: 64px,
+  9: 96px,
+  10: 128px,
+);
+
+$radii: (
+  'tile': 12px,
+  'card': 16px,
+  'image': 24px,
+  'image-mobile': 20px,
+  'pill': 999px,
+);
+
+$font-display: 'Bricolage Grotesque', system-ui, sans-serif;
+$font-body: 'Figtree', system-ui, sans-serif;
+
+$container-max: 1200px;
+$container-pad: 24px;
+$bp-desktop: 768px;
