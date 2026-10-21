@@ -8,9 +8,8 @@ Landing page for the fictional Lumen L2 desk lamp, built from the "Assessment 01
 
 ```bash
 npm install
-npm run build   # compiles scss/main.scss -> css/main.css
-npm run watch   # recompile on change
-npm start       # serve the folder locally
+npm run dev     # builds, watches SCSS and serves with live reload at http://localhost:8080
+npm run build   # one-off compile of scss/main.scss -> css/main.css
 ```
 
 `css/main.css` is committed so the site works on GitHub Pages without a build step.
@@ -25,7 +24,7 @@ scss/
   abstracts/          _variables (token maps), _mixins (desktop breakpoint, focus ring)
   base/               _tokens (maps -> CSS custom properties), _reset, _typography
   layout/             _container (+ .section), _header, _footer
-  components/         _button, _card, _spec-table, _form
+  components/         _icon, _button, _card, _spec-table, _form
   sections/           _hero, _features, _specs, _notify
 css/main.css          compiled output
 ```
@@ -41,4 +40,6 @@ css/main.css          compiled output
 - **Fonts:** Bricolage Grotesque (headings) and Figtree (body) from Google Fonts with `display=swap` and system fallbacks.
 - **Images** are placeholders at the design sizes (580×460 desktop, 327×300 mobile, radius 24/20) served from picsum.photos with `width`/`height` set to avoid layout shift.
 - **Smooth in-page navigation** via `scroll-behavior: smooth` (disabled for `prefers-reduced-motion`) and `scroll-margin-top` so anchors clear the sticky header.
+- **No repetition.** Icons are drawn once in an inline SVG sprite and reused with `<use>`; the section intro (eyebrow, heading, text) is one shared `.section__head`; repeated patterns are mixins (`desktop`, `focus-ring`, `text-small`, `stack`) and the spacing/colour values are tokens.
+- **BEM naming** (`block__element--modifier`) throughout, one block per partial, so selectors stay one class deep and low in specificity. Markup uses `header`, `figure`, `article`, lists and a table instead of generic `div`s wherever a semantic element fits.
 - **Committed CSS build** so deployment is just serving the repo root.

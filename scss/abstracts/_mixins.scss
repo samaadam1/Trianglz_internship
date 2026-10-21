@@ -13,3 +13,15 @@
     outline-offset: 3px;
   }
 }
+
+// "Small / meta" text style from the style guide, shared by perks, links, table, footer.
+@mixin text-small($weight: 500) {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: $weight;
+}
+
+@mixin stack($gap) {
+  display: grid;
+  gap: $gap;
+}

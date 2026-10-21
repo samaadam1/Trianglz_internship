@@ -5,10 +5,14 @@
   "description": "Lumen product landing page (HTML + SCSS)",
   "scripts": {
     "build": "sass --style=compressed --no-source-map scss/main.scss css/main.css",
-    "watch": "sass --watch scss/main.scss css/main.css",
-    "start": "npx serve ."
+    "watch": "sass --watch --style=compressed --no-source-map scss/main.scss css/main.css",
+    "serve": "browser-sync start --server --port 8080 --no-notify --no-open --files \"index.html,css/*.css,js/*.js\"",
+    "dev": "npm-run-all build --parallel watch serve",
+    "start": "npm run dev"
   },
   "devDependencies": {
+    "browser-sync": "^3.0.4",
+    "npm-run-all2": "^8.0.4",
     "sass": "^1.80.0"
   }
 }

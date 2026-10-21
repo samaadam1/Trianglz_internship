@@ -1,4 +1,5 @@
 @use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
 
 .container {
   width: 100%;
@@ -14,9 +15,17 @@
     background: var(--color-surface);
   }
 
+  // Eyebrow + heading + intro, shared by features, specs and notify.
   &__head {
-    display: grid;
-    gap: var(--space-3);
-    margin-bottom: var(--space-7);
+    @include stack(var(--space-3));
+
+    &--center {
+      margin-bottom: var(--space-7);
+
+      @include desktop {
+        justify-items: center;
+        text-align: center;
+      }
+    }
   }
 }

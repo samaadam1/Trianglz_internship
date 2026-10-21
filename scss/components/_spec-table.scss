@@ -5,29 +5,26 @@
   border-collapse: collapse;
   border-top: 1px solid var(--color-ink);
 
-  th,
-  td {
+  &__label,
+  &__value {
+    @include text-small;
     padding-block: var(--space-4);
     border-bottom: 1px solid var(--color-line);
-    font-size: 14px;
-    line-height: 20px;
     vertical-align: top;
+
+    @include desktop {
+      padding-block: var(--space-5);
+    }
   }
 
-  th {
+  &__label {
     font-weight: 600;
     text-align: left;
     color: var(--color-ink);
   }
 
-  td {
+  &__value {
+    font-weight: 400;
     text-align: right;
-  }
-
-  @include desktop {
-    th,
-    td {
-      padding-block: var(--space-5);
-    }
   }
 }

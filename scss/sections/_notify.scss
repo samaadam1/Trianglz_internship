@@ -2,15 +2,18 @@
 
 .notify {
   background: var(--color-ink);
-  color: var(--color-paper);
 
-  h2 {
+  &__title {
     color: var(--color-paper);
   }
 
+  &__text,
+  &__hint {
+    color: var(--color-line);
+  }
+
   &__grid {
-    display: grid;
-    gap: var(--space-6);
+    @include stack(var(--space-6));
 
     @include desktop {
       grid-template-columns: 1fr 1fr;
@@ -19,15 +22,8 @@
     }
   }
 
-  &__copy {
-    display: grid;
-    gap: var(--space-3);
-    color: var(--color-line);
-  }
-
   &__form {
-    display: grid;
-    gap: var(--space-3);
+    @include stack(var(--space-3));
 
     @include desktop {
       grid-template-columns: 1fr auto;
@@ -38,7 +34,6 @@
   &__hint {
     font-size: 12px;
     line-height: 16px;
-    color: var(--color-line);
 
     @include desktop {
       grid-column: 1 / -1;

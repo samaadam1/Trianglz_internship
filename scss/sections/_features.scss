@@ -1,16 +1,8 @@
 @use '../abstracts/mixins' as *;
 
 .features {
-  &__head {
-    @include desktop {
-      justify-items: center;
-      text-align: center;
-    }
-  }
-
-  &__grid {
-    display: grid;
-    gap: var(--grid-gap);
+  &__list {
+    @include stack(var(--grid-gap));
 
     @include desktop {
       grid-template-columns: repeat(3, 1fr);

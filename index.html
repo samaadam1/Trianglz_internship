@@ -18,24 +18,39 @@
     <script src="js/main.js" defer></script>
   </head>
   <body>
+    <!-- Icon sprite: each icon is drawn once and reused with <use>. -->
+    <svg class="sprite" aria-hidden="true" focusable="false">
+      <symbol id="icon-check" viewBox="0 0 12 12"><path d="M2 6.5l2.5 2.5L10 3.5" /></symbol>
+      <symbol id="icon-menu" viewBox="0 0 18 18"><path d="M2 5h14M2 9h14M2 13h14" /></symbol>
+      <symbol id="icon-sun" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="4" />
+        <path d="M12 2.5v2.5M12 19v2.5M2.5 12H5M19 12h2.5M5.3 5.3l1.8 1.8M16.9 16.9l1.8 1.8M18.7 5.3l-1.8 1.8M7.1 16.9l-1.8 1.8" />
+      </symbol>
+      <symbol id="icon-contrast" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="8.5" />
+        <path d="M12 3.5v17" />
+      </symbol>
+      <symbol id="icon-fold" viewBox="0 0 24 24"><path d="M4 19h16M4 19L14 7M7.5 19a5.5 5.5 0 0 0-1-3" /></symbol>
+    </svg>
+
     <a class="skip-link" href="#main">Skip to content</a>
 
     <header class="site-header">
       <div class="container site-header__inner">
         <a class="logo" href="#top" aria-label="Lumen home">
           <span class="logo__mark" aria-hidden="true"></span>
-          lumen
+          <span class="logo__text">lumen</span>
         </a>
 
         <nav class="nav" id="site-nav" aria-label="Primary">
           <ul class="nav__list">
-            <li><a class="nav__link" href="#features">Features</a></li>
-            <li><a class="nav__link" href="#specs">Specs</a></li>
-            <li><a class="nav__link" href="#notify">Updates</a></li>
+            <li class="nav__item"><a class="nav__link" href="#features">Features</a></li>
+            <li class="nav__item"><a class="nav__link" href="#specs">Specs</a></li>
+            <li class="nav__item"><a class="nav__link" href="#notify">Updates</a></li>
           </ul>
         </nav>
 
-        <button class="btn btn--secondary btn--small cart" type="button">Cart (0)</button>
+        <button class="btn btn--secondary btn--small site-header__cart" type="button">Cart (0)</button>
 
         <button
           class="menu-toggle"
@@ -44,9 +59,7 @@
           aria-controls="site-nav"
           aria-label="Toggle menu"
         >
-          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true">
-            <path d="M2 5h14M2 9h14M2 13h14" />
-          </svg>
+          <svg class="icon icon--lg" aria-hidden="true"><use href="#icon-menu" /></svg>
         </button>
       </div>
     </header>
@@ -61,61 +74,58 @@
               A slim aluminium desk lamp with a dimmable, flicker-free LED and a warm-to-cool
               range for long working days.
             </p>
+
             <div class="hero__actions">
               <a class="btn btn--primary" href="#notify">Pre-order — $89</a>
               <a class="btn btn--secondary" href="#specs">See the specs</a>
             </div>
+
             <ul class="hero__perks">
-              <li class="hero__perk"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 6.5l2.5 2.5L10 3.5" /></svg>Free shipping</li>
-              <li class="hero__perk"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 6.5l2.5 2.5L10 3.5" /></svg>2-year warranty</li>
-              <li class="hero__perk"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 6.5l2.5 2.5L10 3.5" /></svg>USB-C powered</li>
+              <li class="hero__perk"><svg class="icon" aria-hidden="true"><use href="#icon-check" /></svg>Free shipping</li>
+              <li class="hero__perk"><svg class="icon" aria-hidden="true"><use href="#icon-check" /></svg>2-year warranty</li>
+              <li class="hero__perk"><svg class="icon" aria-hidden="true"><use href="#icon-check" /></svg>USB-C powered</li>
             </ul>
           </div>
 
-          <div class="hero__media">
+          <figure class="hero__media">
             <img
+              class="hero__image"
               src="https://picsum.photos/seed/lumen-lamp/580/460"
               width="580"
               height="460"
               alt="Lumen L2 desk lamp (placeholder image)"
             />
-          </div>
+          </figure>
         </div>
       </section>
 
       <section class="section section--surface features" id="features" aria-labelledby="features-title">
         <div class="container">
-          <div class="section__head features__head">
+          <header class="section__head section__head--center">
             <p class="eyebrow">Why Lumen</p>
             <h2 id="features-title">Designed for desks, not showrooms.</h2>
             <p>Three details that make a difference after hour six.</p>
-          </div>
+          </header>
 
-          <ul class="features__grid">
-            <li>
+          <ul class="features__list">
+            <li class="features__item">
               <article class="card">
-                <span class="card__icon" aria-hidden="true">
-                  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"><circle cx="9" cy="9" r="2.5" /><path d="M9 2v1.5M9 14.5V16M2 9h1.5M14.5 9H16M4 4l1 1M13 13l1 1M14 4l-1 1M5 13l-1 1" /></svg>
-                </span>
-                <h3>Dimmable, flicker-free</h3>
+                <span class="card__icon"><svg class="icon icon--xl" aria-hidden="true"><use href="#icon-sun" /></svg></span>
+                <h3 class="card__title">Dimmable, flicker-free</h3>
                 <p class="card__text">Five brightness levels with a steady LED driver, so your eyes stay relaxed on long sessions.</p>
               </article>
             </li>
-            <li>
+            <li class="features__item">
               <article class="card">
-                <span class="card__icon" aria-hidden="true">
-                  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"><circle cx="9" cy="9" r="6.5" /><path d="M9 2.5v13" /></svg>
-                </span>
-                <h3>Warm to cool</h3>
+                <span class="card__icon"><svg class="icon icon--xl" aria-hidden="true"><use href="#icon-contrast" /></svg></span>
+                <h3 class="card__title">Warm to cool</h3>
                 <p class="card__text">Slide from candle-warm 2700K to daylight 6500K to match the time of day and the task.</p>
               </article>
             </li>
-            <li>
+            <li class="features__item">
               <article class="card">
-                <span class="card__icon" aria-hidden="true">
-                  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M3 14.5h12M3 14.5L10 5" /><path d="M5.5 14.5a4 4 0 0 0-.7-2" /></svg>
-                </span>
-                <h3>Folds flat</h3>
+                <span class="card__icon"><svg class="icon icon--xl" aria-hidden="true"><use href="#icon-fold" /></svg></span>
+                <h3 class="card__title">Folds flat</h3>
                 <p class="card__text">The two-joint arm folds down to 4 cm, so it slides into a backpack or a drawer.</p>
               </article>
             </li>
@@ -125,21 +135,21 @@
 
       <section class="section specs" id="specs" aria-labelledby="specs-title">
         <div class="container specs__grid">
-          <div class="specs__head">
+          <header class="section__head">
             <p class="eyebrow">Specs</p>
             <h2 id="specs-title">The numbers behind the light.</h2>
             <p>Everything inside the box, measured and listed.</p>
-          </div>
+          </header>
 
           <table class="spec-table">
             <caption class="visually-hidden">Lumen L2 specifications</caption>
             <tbody>
-              <tr><th scope="row">Colour temp.</th><td>2700K – 6500K</td></tr>
-              <tr><th scope="row">Brightness</th><td>5 levels</td></tr>
-              <tr><th scope="row">Power</th><td>USB-C, 10 W</td></tr>
-              <tr><th scope="row">Arm reach</th><td>42 cm</td></tr>
-              <tr><th scope="row">Weight</th><td>1.1 kg</td></tr>
-              <tr><th scope="row">Materials</th><td>Anodised aluminium, silicone</td></tr>
+              <tr class="spec-table__row"><th class="spec-table__label" scope="row">Colour temp.</th><td class="spec-table__value">2700K – 6500K</td></tr>
+              <tr class="spec-table__row"><th class="spec-table__label" scope="row">Brightness</th><td class="spec-table__value">5 levels</td></tr>
+              <tr class="spec-table__row"><th class="spec-table__label" scope="row">Power</th><td class="spec-table__value">USB-C, 10 W</td></tr>
+              <tr class="spec-table__row"><th class="spec-table__label" scope="row">Arm reach</th><td class="spec-table__value">42 cm</td></tr>
+              <tr class="spec-table__row"><th class="spec-table__label" scope="row">Weight</th><td class="spec-table__value">1.1 kg</td></tr>
+              <tr class="spec-table__row"><th class="spec-table__label" scope="row">Materials</th><td class="spec-table__value">Anodised aluminium, silicone</td></tr>
             </tbody>
           </table>
         </div>
@@ -147,10 +157,10 @@
 
       <section class="section notify" id="notify" aria-labelledby="notify-title">
         <div class="container notify__grid">
-          <div class="notify__copy">
-            <h2 id="notify-title">Get notified when Lumen ships.</h2>
-            <p>One email when pre-orders open. No newsletters.</p>
-          </div>
+          <header class="section__head">
+            <h2 id="notify-title" class="notify__title">Get notified when Lumen ships.</h2>
+            <p class="notify__text">One email when pre-orders open. No newsletters.</p>
+          </header>
 
           <form class="notify__form" action="#" method="post">
             <div class="field">
@@ -168,10 +178,10 @@
       <div class="container site-footer__inner">
         <a class="logo" href="#top" aria-label="Lumen home">
           <span class="logo__mark" aria-hidden="true"></span>
-          lumen
+          <span class="logo__text">lumen</span>
         </a>
         <nav aria-label="Footer">
-          <ul class="site-footer__links">
+          <ul class="site-footer__list">
             <li><a class="site-footer__link" href="#">Shipping</a></li>
             <li><a class="site-footer__link" href="#">Returns</a></li>
             <li><a class="site-footer__link" href="#">Contact</a></li>
