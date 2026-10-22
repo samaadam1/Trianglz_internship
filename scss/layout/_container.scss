@@ -23,6 +23,10 @@
       margin-bottom: var(--space-7);
 
       @include desktop {
+        // Narrow column so the heading wraps onto two lines, as in the design.
+        max-width: 640px;
+        margin-inline: auto;
+        margin-bottom: var(--space-8);
         justify-items: center;
         text-align: center;
       }

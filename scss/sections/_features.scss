@@ -8,4 +8,9 @@
       grid-template-columns: repeat(3, 1fr);
     }
   }
+
+  // Grid item so each card stretches to the tallest card in the row.
+  &__item {
+    display: grid;
+  }
 }

@@ -34,6 +34,8 @@ $radii: (
 $font-display: 'Bricolage Grotesque', system-ui, sans-serif;
 $font-body: 'Figtree', system-ui, sans-serif;
 
-$container-max: 1200px;
+$content-max: 1200px;
 $container-pad: 24px;
+// Style guide: 1200px of content, centred, with 24px side padding.
+$container-max: $content-max + 2 * $container-pad;
 $bp-desktop: 768px;

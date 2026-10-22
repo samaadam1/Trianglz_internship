@@ -7,12 +7,20 @@
   border-radius: var(--radius-card);
   background: var(--color-paper);
 
+  @include desktop {
+    padding: var(--space-6);
+  }
+
   &__icon {
     display: grid;
     place-items: center;
     width: 48px;
     height: 48px;
     margin-bottom: var(--space-2);
+
+    @include desktop {
+      margin-bottom: var(--space-4);
+    }
     border-radius: var(--radius-tile);
     background: var(--color-accent);
     color: var(--color-ink);
@@ -21,9 +29,11 @@
   &__text {
     font-size: 14px;
     line-height: 22px;
+    max-inline-size: 280px;
 
     @include desktop {
-      font-size: 15px;
+      font-size: 16px;
+      line-height: 28px;
     }
   }
 }

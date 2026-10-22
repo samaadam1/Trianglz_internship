@@ -4,6 +4,10 @@
   padding-block: var(--space-6);
   background: var(--color-paper);
 
+  @include desktop {
+    padding-block: var(--space-7);
+  }
+
   &__inner {
     @include stack(var(--space-4));
 

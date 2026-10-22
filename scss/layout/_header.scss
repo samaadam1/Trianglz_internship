@@ -51,6 +51,10 @@
     justify-content: space-between;
     min-height: 72px;
     gap: var(--space-4);
+
+    @include desktop {
+      min-height: 80px;
+    }
   }
 
   // Doubled selector so it wins over .btn's display regardless of file order.

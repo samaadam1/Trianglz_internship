@@ -3,6 +3,10 @@
 .notify {
   background: var(--color-ink);
 
+  @include desktop {
+    padding-block: var(--space-9);
+  }
+
   &__title {
     color: var(--color-paper);
   }

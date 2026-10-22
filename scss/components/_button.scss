@@ -19,9 +19,6 @@
 
   @include desktop {
     width: auto;
-    height: 44px;
-    padding-inline: var(--space-5);
-    font-size: 14px;
   }
 
   @include focus-ring;
